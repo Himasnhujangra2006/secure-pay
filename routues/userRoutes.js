@@ -1,10 +1,9 @@
 const express = require("express")
 const router = express.Router()
+const {loginUser,verifyUser } = require("../controler/userController")
+router.post("/login",loginUser )
+router.post("/verify",verifyUser)
 
-router.post("/login",(req,res)=>{
-    res.send("login successfully")
-    
-}  )
 module.exports = router
 
 
